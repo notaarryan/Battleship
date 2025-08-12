@@ -3,13 +3,15 @@ export class Ship {
     this.length = length;
     this.ifSunken = false;
     this.timesHit = 0;
+    this.start = null;
+    this.end = null;
+    this.orientation = null;
   }
 
   hit() {
     if (!this.ifSunken) {
       ++this.timesHit;
     }
-    this.isSunken();
   }
 
   isSunken() {
